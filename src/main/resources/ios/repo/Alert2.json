@@ -60,5 +60,14 @@
 		[
 			"xpath:////div[@class='modal-body']//td"
 		]
+	},
+	
+	"oBtnOKExp": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////div[@class='kmc kmc-msg']//button[text()='确定']"
+		]
 	}
 }

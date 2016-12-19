@@ -53,11 +53,17 @@ public class TestD01JJSG extends TestBase {
 		// 获取对话框2内容并校验
 		String vCheckPoint2 = param.get("验证2");
 		String vActualCheckPoint2 = alert.doGetText();
-		AssertUtil.assertContains(vActualCheckPoint2, vCheckPoint2);
-		alert.doAccept();
 
-		// 参数中加入委托编号
-		String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
-		param.put("委托编号", vNo);
+		if(param.get("类型").equals("正例")){
+			AssertUtil.assertContains(vActualCheckPoint2, vCheckPoint2);
+			alert.doAccept();
+	
+			// 参数中加入委托编号
+			String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
+			param.put("委托编号", vNo);
+		}else{
+			AssertUtil.assertEquals(vCheckPoint2,vActualCheckPoint2);
+			alert.doAccept();
+		}
 	}
 }

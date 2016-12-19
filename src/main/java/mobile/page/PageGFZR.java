@@ -5,6 +5,7 @@ import mobile.page.base.ElementOfs;
 import mobile.page.base.PageManager;
 import mobile.page.base.PageTradeWithSelect;
 import mobile.page.module.Alert;
+import mobile.page.module.Loader;
 import up.light.pagefactory.TestElement;
 import up.light.wait.Conditions;
 import up.light.wait.WaitUtil;
@@ -33,6 +34,8 @@ public class PageGFZR extends PageTradeWithSelect {
 	private boolean isInSelectView;
 	
 	private PageCodeSelect mPageCodeSelect = PageManager.getPage(PageCodeSelect.class);
+	private Loader mLoader = PageManager.getPage(Loader.class);
+	
 	/**
 	 * 获取价格
 	 * @return
@@ -89,6 +92,9 @@ public class PageGFZR extends PageTradeWithSelect {
 		isInSelectView = false;
 		doInputSelectCode();
 		
+		// 等待加载框消失
+		mLoader.waitForLoad();
+		
 		// 检查对话框
 		Alert alert = getAlert();
 		if (alert.exists()) {
@@ -96,6 +102,25 @@ public class PageGFZR extends PageTradeWithSelect {
 		}
 
 		return stripe(WaitUtil.waitForText(driver, oTextName.e(), WaitUtil.WAIT_MEDIUM, null, Conditions.NOTBLANK));
+	}
+	
+	/**
+	 * 输入证券代码（验证反例）
+	 * @param code 证券代码
+	 * @return 证券名称
+	 */
+	public void doInputCodeExp(String code) {
+		// 等待元素出现
+		WaitUtil.waitFor(driver, oEditCode, WaitUtil.WAIT_MEDIUM).click();
+		WaitUtil.sleep(500);
+
+		// 选择代码
+		isInSelectView = true;
+		mPageCodeSelect.doInputCode(code);
+		isInSelectView = false;
+		
+		// 等待加载框消失
+		mLoader.waitForLoad();
 	}
 	
 	public void doInputSelectCode() {

@@ -15,6 +15,7 @@ public class Alert2 extends AbstractPage {
 	private TestElement oTextMsgSuccess;
 	private TestElement oTextLiMsgSuccess;
 	private TestElement oBtnOK;
+	private TestElement oBtnOKExp;
 	private TestElement oTitleMsgFail;
 	// 委托失败对话框
 	private TestElement oTextMsgFail;
@@ -46,7 +47,12 @@ public class Alert2 extends AbstractPage {
 	public void doAcceptResult() {
 		oBtnOK.e().click();
 	}
-
+	
+	public void doAcceptConfirmExp(){
+		oBtnOKExp.e().click();
+	}
+	
+	
 	private String getMsg(TestElement es) {
 		WaitUtil.sleep(1000);
 		StringBuilder sb = new StringBuilder();

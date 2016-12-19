@@ -50,11 +50,14 @@ public class TestE04ETFSH extends TestBase {
 		String vCheckPoint2 = param.get("验证2");
 		String vActualCheckPoint2 = alert.doGetResultLiText();
 		AssertUtil.assertContains(vActualCheckPoint2, vCheckPoint2);
-		alert.doAcceptResult();
-
-		// 参数中加入委托编号
-		String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
-		param.put("委托编号", vNo);	
+		if(param.get("类别").equals("正例")){
+			alert.doAcceptResult();
+			// 参数中加入委托编号
+			String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
+			param.put("委托编号", vNo);
+		}else{
+			alert.doAcceptConfirmExp();
+		}	
 		
 	}
 }

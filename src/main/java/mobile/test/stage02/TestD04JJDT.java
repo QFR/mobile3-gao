@@ -68,9 +68,10 @@ public class TestD04JJDT extends TestBase {
 		String vActualCheckPoint2 = vAlert.doGetText();
 		AssertUtil.assertContains(vActualCheckPoint2, vCheckPoint2);
 		vAlert.doAccept();
-
-		// 参数中加入委托编号
-		String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
-		param.put("委托编号", vNo);
+		if(param.get("类型").equals("正例")){
+			// 参数中加入委托编号
+			String vNo = vActualCheckPoint2.substring(vActualCheckPoint2.indexOf("：") + 1, vActualCheckPoint2.length());
+			param.put("委托编号", vNo);
+		}
 	}
 }
