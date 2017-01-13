@@ -43,6 +43,15 @@
 			"xpath:////label[text()='基金转换']"
 		]
 	},
+	
+	"oBtnKH": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////label[text()='基金开户']"
+		]
+	},
 
 	"oBtnFHSZ": 
 	{
@@ -50,6 +59,15 @@
 		"bys": 
 		[
 			"xpath:////label[text()='分红设置']"
+		]
+	},
+	
+	"oBtnCWZCN": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////label[text()='基金场外转场内']"
 		]
 	}
 }

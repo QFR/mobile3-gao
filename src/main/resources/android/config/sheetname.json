@@ -12,6 +12,8 @@
 	"TestD05JJDS": "D05基金定赎",
 	"TestD06JJZH": "D06基金转换",
 	"TestD07JJFHSZ": "D07基金分红设置",
+	"TestD08JJKH": "D08基金开户",
+	"TestD09JJCWZCN": "D09基金场外转场内",
 	"TestE01ETFWXXJRG": "E01ETF网下现金认购",
 	"TestE02ETFWXGPRG": "E02ETF网下股票认购",
 	"TestE03ETFSG": "E03ETF申购",

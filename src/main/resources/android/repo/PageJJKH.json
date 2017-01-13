@@ -1,0 +1,26 @@
+{
+	"oImgJJGSLIST": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////div[@class='pull-right']/img"
+		]
+	},
+	"oLiJJGSCUR": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////li[text()='鹏华基金']"
+		]
+	},
+	"oBtnTJ": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////button[@class='btn btn-buy']"
+		]
+	}
+}

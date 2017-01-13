@@ -23,8 +23,10 @@
 			<class name="mobile.test.stage01.TestD03JJRG" />
 			<class name="mobile.test.stage02.TestD04JJDT" />
 			<class name="mobile.test.stage02.TestD05JJDS" />
-			<class name="mobile.test.stage02.TestD06JJZH" />
-			<class name="mobile.test.stage02.TestD07JJFHSZ" />
+			<class name="mobile.test.stage02.TestD06JJZH" />	
+			<class name="mobile.test.stage02.TestD07JJFHSZ" />	 
+			<class name="mobile.test.stage02.TestD08JJKH" />  
+			<class name="mobile.test.stage02.TestD09JJCWZCN" />
 
 			<class name="mobile.test.stage03.TestE01ETFWXXJRG" />
 			<class name="mobile.test.stage03.TestE02ETFWXGPRG" />
@@ -70,7 +72,7 @@
 			<class name="mobile.test.stage02.TestL01RRHK" />
 			<class name="mobile.test.stage02.TestL02RRHQ" />
 
-			<class name="mobile.test.stage02.TestM01RRYZZZ" />
+			<class name="mobile.test.stage02.TestM01RRYZZZ" /> 
 		</classes>
 	</test>
 </suite>

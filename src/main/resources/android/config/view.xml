@@ -22,6 +22,8 @@
 				<view name="基金定投" repo="PageMainJJ.oBtnDT" />
 				<view name="基金转换" repo="PageMainJJ.oBtnZH" />
 				<view name="分红设置" repo="PageMainJJ.oBtnFHSZ" />
+				<view name="基金开户" repo="PageMainJJ.oBtnKH" />
+				<view name="基金场外转场内" repo="PageMainJJ.oBtnCWZCN" />
 			</view>
 
 			<view name="ETF基金" repo="PageMainRoot.oBtnETF" checklogin="true">
