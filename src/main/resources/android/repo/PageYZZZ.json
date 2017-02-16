@@ -51,5 +51,32 @@
 		[
 			"id://btnYzzz"
 		]
+	},
+
+	"oBtnCYE": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////button[text()='查余额']"
+		]
+	},
+	
+	"oEditYHYE": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"xpath:////input[@placeholder='银行余额']"
+		]
+	},
+	
+	"oEditYHPwd": 
+	{
+		"in": "WEBVIEW_LAST",
+		"bys": 
+		[
+			"id://yhmm"
+		]
 	}
 }

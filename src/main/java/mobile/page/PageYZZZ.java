@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import mobile.page.base.AbstractPage;
 import up.light.pagefactory.TestElement;
 import up.light.utils.ArgumentUtil;
+import up.light.wait.WaitUtil;
 
 /**
  * 银证转账
@@ -21,7 +22,9 @@ public class PageYZZZ extends AbstractPage {
 	private TestElement oEditNum;	//转账金额
 	private TestElement oEditPwd;	//密码输入框
 	private TestElement oBtnOK;		//确定按钮
-	
+	private TestElement oBtnCYE;	//查余额
+	private TestElement oEditYHPwd;	//银行密码
+	private TestElement oEditYHYE;	//银行余额
 	/**
 	 * 切换类型：银转证、证转银
 	 * @param type 类型：银行转证券、证券转银行
@@ -86,4 +89,27 @@ public class PageYZZZ extends AbstractPage {
 	public void doTrade() {
 		oBtnOK.e().click();
 	}
+	
+	/**
+	 * 点击查余额按钮
+	 */
+	public void doBtnCYE() {
+		oBtnCYE.e().click();
+	}
+	
+	/**
+	 * 输入密码
+	 * @param pwd 密码
+	 */
+	public void doInputYHPwd(String pwd) {
+		getKeyboard().doInput(oEditYHPwd.e(), pwd);
+	}
+	/**
+	 * 得到银行余额
+	 */
+	public String doGetYHYE() {
+		WaitUtil.sleep(500);
+		return oEditYHYE.e().getAttribute("value");
+	}
+
 }

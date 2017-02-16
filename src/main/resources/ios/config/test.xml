@@ -9,15 +9,16 @@
 
 	<test name="MobileTest">
 		<classes>
-			<class name="mobile.test.stage01.TestA01ZCCX" />
+		  	<class name="mobile.test.stage01.TestA01ZCCX" />
 
 			<class name="mobile.test.stage01.TestB01GPMR" />
 			<class name="mobile.test.stage01.TestB02GPMC" />
 
 			<class name="mobile.test.stage01.TestC01YZZZ" />
 			<class name="mobile.test.stage02.TestC02ZFHZ" />
-			<class name="mobile.test.stage02.TestC03YJGJ" />
-
+			<class name="mobile.test.stage02.TestC03YJGJ" /> 
+			<class name="mobile.test.stage02.TestC04YHYE" />
+			
 			<class name="mobile.test.stage01.TestD01JJSG" />
 			<class name="mobile.test.stage01.TestD02JJSH" />
 			<class name="mobile.test.stage01.TestD03JJRG" />
@@ -72,7 +73,7 @@
 			<class name="mobile.test.stage02.TestL01RRHK" />
 			<class name="mobile.test.stage02.TestL02RRHQ" />
 
-			<class name="mobile.test.stage02.TestM01RRYZZZ" /> 
+			<class name="mobile.test.stage02.TestM01RRYZZZ" />
 		</classes>
 	</test>
 </suite>
